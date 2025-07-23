@@ -46,16 +46,17 @@ git clone [https://github.com/your-username/your-repo-name.git](https://github.c
 cd your-repo-name # Navigate into the cloned project directory
 
 (Replace your-username/your-repo-name.git with your actual GitHub repository URL.)
+```
+### 2. Backend Setup
 
-2. Backend Setup
 Navigate into the backend directory:
 
-Bash
+```Bash
 
 cd backend
 Install backend dependencies:
-
-Bash
+```
+```Bash
 
 npm install
 Create a .env file in the backend directory and add your MongoDB connection string and port:
@@ -77,18 +78,19 @@ Bash
 
 node server.js
 The server should now be running on http://localhost:5000 and connected to MongoDB.
-
-3. Frontend Setup
+```
+### 3. Frontend Setup
 Open the index.html file in your web browser:
 
-Bash
+```Bash
 
 # From the main project directory
 cd ../frontend
 # Then open index.html directly in your browser or via a Live Server extension (if using VS Code)
 You should now see the To-Do List application.
-
-📞 Contact
+```
+### 📞 Contact
+```Bash
 Feel free to reach out if you have any questions or feedback!
 
 LinkedIn https://www.linkedin.com/in/bramantyobudijatmiko/
