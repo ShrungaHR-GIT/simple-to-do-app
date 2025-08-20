@@ -1,6 +1,6 @@
 // frontend/script.js
 
-const API_URL = 'http://localhost:5000/todos'; // Ganti jika backend Anda di port/domain lain
+const API_URL = 'http://localhost:5001/todos'; // Ganti jika backend Anda di port/domain lain
 
 const todoInput = document.getElementById('todo-input');
 const addTodoBtn = document.getElementById('add-todo-btn');
