@@ -1,6 +1,19 @@
 // frontend/script.js
 
-const API_URL = 'http://localhost:5000/todos'; // Ganti jika backend Anda di port/domain lain
+let API_URL;
+
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    // Local testing (if you ever run backend locally)
+    API_URL = 'http://localhost:5001/todos';
+} else if (/^\d+\.\d+\.\d+\.\d+$/.test(window.location.hostname)) {
+    // If accessed via public IP (like EC2 instance)
+    API_URL = `http://${window.location.hostname}:5001/todos`;
+} else {
+    // Inside Docker network (frontend talking to backend service)
+    API_URL = 'http://backend:5000/todos';
+}
+
+console.log("Using API:", API_URL);
 
 const todoInput = document.getElementById('todo-input');
 const addTodoBtn = document.getElementById('add-todo-btn');
