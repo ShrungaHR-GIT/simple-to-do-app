@@ -1,5 +1,6 @@
 // frontend/script.js
 
+<<<<<<< HEAD
 let API_URL;
 
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
