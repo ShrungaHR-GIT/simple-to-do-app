@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: shrunga153/simple-to-do-app-frontend:latest
+          image: shrunga153/frontend2:latest
           ports:
             - containerPort: 80
           env:

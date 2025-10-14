@@ -1,18 +1,16 @@
 // frontend/script.js
 
-<<<<<<< HEAD
 let API_URL;
 
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    // Local testing (if you ever run backend locally)
     API_URL = 'http://localhost:5001/todos';
 } else if (/^\d+\.\d+\.\d+\.\d+$/.test(window.location.hostname)) {
-    // If accessed via public IP (like EC2 instance)
-    API_URL = `http://${window.location.hostname}:5001/todos`;
+    // If accessed via EC2 public IP
+    API_URL = `http://${window.location.hostname}:30202/todos`;
 } else {
-    // Inside Docker network (frontend talking to backend service)
-    API_URL = 'http://backend:5000/todos';
-}
+    // Inside Kubernetes or Docker network
+    API_URL = 'http://backend:5001/todos';
+} 
 
 console.log("Using API:", API_URL);
 

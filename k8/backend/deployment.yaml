@@ -18,10 +18,10 @@ spec:
         - name: backend
           image: shrunga153/simple-to-do-app-backend:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 5000
           env:
-            - name: SPRING_DATA_MONGODB_URI
-              value: mongodb://mongo:27017/todo_db
+            - name: MONGODB_URI
+              value: mongodb://mongo-service:27017/todo_db
 
 
 
